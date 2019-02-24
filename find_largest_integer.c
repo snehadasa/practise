@@ -3,7 +3,6 @@
 int find_largest(int arr[])
 {
     int i, largest;
-    int n = sizeof(arr)/sizeof(int);
     
     if (n == 0)
     {
@@ -23,7 +22,7 @@ int find_largest(int arr[])
 int main()
 {
     int arr[] = {5, 6, 200, 56, 98, 109, 255, 20000, 108, 771};
-    int largest = find_largest(arr);
+    int largest = find_largest(arr, 10);
     
     printf("largest integer %d\n", largest);
 
