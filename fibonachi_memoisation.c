@@ -10,7 +10,7 @@ int fib(int n, int ans[])
     {
         return (ans[n]);
     }
-    ans[n] = (fib(n - 1) + fib(n - 2));
+    ans[n] = (fib(n - 1, ans) + fib(n - 2, ans));
     return ans[n];
 }
 
@@ -24,5 +24,8 @@ int main()
     {
         arr[i] = 0;
     }
-    fib(50, arr);
+    for (i = 1; i <= n; i++)
+    {
+        printf("%d, ", fib(i, arr));
+    }
 }
